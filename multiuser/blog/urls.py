@@ -20,7 +20,12 @@ from blog import views
 from django.conf.urls import url, include
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.HomeView.as_view(), name="home"),
+    path('blogs/', views.BlogListView.as_view(), name="blog"),
+    path('<int:pk>/', views.BlogDetailView.as_view(), name='blog-detail'),
+
+
+
 
 
 ]
