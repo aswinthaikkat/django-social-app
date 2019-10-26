@@ -10,7 +10,8 @@
 
 <body>
     <navbar>
-        <nav><a href="{% url 'home' %}"> HOME</a></nav>
+        <nav><a href="{% url 'social:allposts' %}"> SOCIAL</a></nav>
+        <nav><a href="{% url 'blog:blog' %}"> HOME</a></nav>
         <nav><a href="{% url 'account_login' %}">LOGIN</a></nav>
         <nav><a href="{% url 'account_logout' %}">LOGOUT</a></nav>
         <nav><a href="{% url 'account_signup' %}">SIGNUP</a></nav>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # installedapps
     'blog',
     'accounts',
+    'social',
     # allauthneedsthis
     'allauth',
     'allauth.account',
@@ -141,8 +142,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/blog/'
-LOGOUT_REDIRECT_URL = '/blog/'
+LOGIN_REDIRECT_URL = 'blog:blog'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'blog:blog'
 
 
 if DEBUG:

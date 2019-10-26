@@ -21,7 +21,9 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^blog/', include('blog.urls')),
+    url('profile/', include('blog.urls')),
+    url('social/', include('social.urls')),
+
 
 
 ]

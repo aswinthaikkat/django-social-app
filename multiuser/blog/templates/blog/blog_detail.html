@@ -5,7 +5,11 @@
 
 
 <h1> {{ blog.title}}</h1>
+<h1> {{ blog.pk}}</h1>
 <p>{{blog.description}}</p>
+<p><a href="{% url 'blog:blog-update' pk=blog.pk %}">Update</a></p>
+<p><a href="{% url 'blog:blog-delete' pk=blog.pk %}">Delete</a></p>
+
 
 
 

@@ -13,24 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+
 from django.urls import path
-from blog import views
-
-from django.conf.urls import url, include
-
-from django.urls import reverse_lazy
-from django.views.generic import RedirectView
+from social import views
 
 
-app_name = 'blog'
+app_name = 'social'
 
 urlpatterns = [
-    path('', views.BlogListView.as_view(), name="blog"),
-    path('<int:pk>/', views.BlogDetailView.as_view(), name='blog-detail'),
-    path('create/', views.BlogCreateView.as_view(), name='blog-create'),
-    path('update/<int:pk>/', views.BlogUpdateView.as_view(), name='blog-update'),
-    path('delete/<int:pk>/', views.BlogDeleteView.as_view(), name='blog-delete'),
+    path('allposts/', views.AllPostListView.as_view(), name='allposts'),
 
 
 ]
